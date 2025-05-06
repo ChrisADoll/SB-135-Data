@@ -3,7 +3,7 @@ library(jsonlite)
 library(writexl)
 
 # Set your API key
-api_key <-"jPOXEVeQcPheoh3b7jCIRcodZJRdBbGVfjnXk4YT"
+api_key <-"YourKey"
 
 # Define the base URL and parameters
 base_url <- "https://api.data.gov/ed/collegescorecard/v1/schools"
