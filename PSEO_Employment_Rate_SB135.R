@@ -2,7 +2,7 @@ library(httr)
 library(jsonlite)
 library(openxlsx)  # for Excel output
 
-api_key <- "a2a974de178f355d10187c7093065e964e95865c"
+api_key <- "YourKey"
 
 # Set up request for Flows data
 base_url <- "https://api.census.gov/data/timeseries/pseo/flows"
