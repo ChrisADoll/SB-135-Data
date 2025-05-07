@@ -6,11 +6,12 @@ library(writexl)
 api_key <-"YourKey"
 
 # Define the base URL and parameters
+# Insert UNITID
 base_url <- "https://api.data.gov/ed/collegescorecard/v1/schools"
 params <- list(
   api_key = api_key,
   fields = "school.name,latest.cost.avg_net_price.public,latest.aid.ftft_federal_loan_rate_pooled,latest.aid.median_debt.completers.overall,latest.repayment.2_yr_bb_fed_repayment_suppressed.ugcomp.default,latest.repayment.2_yr_bb_fed_repayment_suppressed.ugcomp.delinquent,latest.repayment.2_yr_bb_fed_repayment_suppressed.ugcomp.forbearance,latest.repayment.2_yr_bb_fed_repayment_suppressed.ugcomp.deferment,latest.repayment.2_yr_bb_fed_repayment_suppressed.ugcomp.noprogress,latest.repayment.2_yr_bb_fed_repayment_suppressed.ugcomp.makingprogress,latest.repayment.2_yr_bb_fed_repayment_suppressed.ugcomp.fullypaid,latest.repayment.2_yr_bb_fed_repayment_suppressed.ugcomp.discharge",
-  id = "201672"
+  id = "******"
 )
 
 # Build the URL with parameters
@@ -42,7 +43,7 @@ names(college_df) <- c("College Name", "Average Net Price", "FTIC with Fed Aid",
 print(college_df)
 
 # Export the data to Excel
-write_xlsx(college_df, "SP25_CollegeScorecard_data.xlsx")
+write_xlsx(college_df, "CollegeScorecard_data.xlsx")
 
 
 
