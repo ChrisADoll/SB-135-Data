@@ -9,7 +9,8 @@ base_url <- "https://api.census.gov/data/timeseries/pseo/flows"
 
 params <- list(
   get = "Y1_GRADS_EMP,Y1_GRADS_NME,INSTITUTION,DEGREE_LEVEL,GRAD_COHORT,GRAD_COHORT_YEARS",
-  INSTITUTION = "01104600",
+  # insert institution OPEID below
+  INSTITUTION = "*******",
   GRAD_COHORT = "2016",
   GRAD_COHORT_YEARS="5",
   `for` = "us:*",
@@ -38,7 +39,7 @@ if (status_code(response) == 200) {
   head(df)
   
   # Export to Excel
-  write.xlsx(df, file = "employment_rate_output_SP_25.xlsx", sheetName = "EmploymentRates", overwrite = TRUE)
+  write.xlsx(df, file = "employment_rate_output.xlsx", sheetName = "EmploymentRates", overwrite = TRUE)
   print("✅ Excel file written: employment_rate_output.xlsx")
   
 } else {
